@@ -92,6 +92,18 @@ public static void main(String[] args)
     //System.out.println(c);
     removeA(w);
     System.out.println(w);
+    Wordset s1 = new Wordset();
+    Wordset s2 = new Wordset();
+    s1.insert("BE");
+    s1.insert("NOT");
+    s1.insert("AFRAID");
+    
+    s2.insert("BE");
+    s2.insert("TO");
+    s2.insert("OR");
+    s2.insert("NOT");    
+    Wordset p = commonElements(s1, s2);
+    System.out.println(p);
 }
 public static int countA(Wordset ws)
 {
@@ -120,5 +132,16 @@ public static void removeA(Wordset ws)
         }
     }
     
+}
+public static Wordset commonElements(Wordset s1,Wordset s2) {
+    Wordset n = new Wordset();
+    for (int i = 0; i < s1.size(); i++) {
+        String b = s1.findkth(i);
+        if (s2.contains(b)){
+            n.insert(b);
+        }
+
+    }
+    return n;
 }
 }
