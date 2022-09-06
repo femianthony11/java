@@ -1,0 +1,4 @@
+ - Create for loop
+  - If line equals Name, flag = true
+  - If Flag is true, print lines
+  - if line is empty, flag is false,
